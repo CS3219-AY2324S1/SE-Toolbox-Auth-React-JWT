@@ -8,8 +8,8 @@ const Login = ({ setLogoutUser }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const login = async (e) => {
-    e.preventDefault();
+  const login = async (event) => {
+    event.preventDefault();
     try {
         const response = await axios.post("http://localhost:8080/api/auth/login", {
         username,
